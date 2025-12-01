@@ -1,23 +1,23 @@
 .card {
   max-width: 413px;
-  padding-top: 20px;
 }
 
 .card__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  max-width: 413px;
 }
 
 .card__title {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 413px;
+  max-width: 353px;
+  margin: 0;
+  font-family: "poppins" Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 20px;
 }
 
 .card__image {
@@ -26,16 +26,21 @@
   object-fit: cover;
   display: block;
   border-radius: 8px;
+  margin-bottom: 12px;
 }
 
 .card__like-button {
   background-image: url(../images/heart.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 23px;
   height: 20px;
   border: none;
   background-color: transparent;
   opacity: 40%;
   transition: opacity 5s;
+  cursor: pointer;
 }
 
 .card__like-button:hover {
@@ -47,7 +52,7 @@
     height: 288px;
   }
 
-  .card__content {
-    max-width: 120px;
+  .card__title {
+    max-width: 235px;
   }
 }
