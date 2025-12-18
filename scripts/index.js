@@ -43,7 +43,7 @@ function handleEditProfileSubmit(evt) {
   evt.preventDefault();
   profileNameEl.textContent = editPofileNameInput.value;
   profileDescriptionEl.textContent = editPofileDescriptionInput.value;
-  editProfileModal.classList.remove("modal_is-opened");
+  closeModal(editProfileModal);
 }
 
 function handleNewPostSubmit(evt) {
@@ -53,7 +53,7 @@ function handleNewPostSubmit(evt) {
     caption: newPostCardCaptionInput.value,
   });
 
-  newPostModal.classList.remove("modal_is-opened");
+  closeModal(newPostModal);
 }
 
 function openModal(modal) {
@@ -64,5 +64,5 @@ function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
 }
 
-editProfileForm.addEventListener("submit", handleEditProfilesubmit);
-newPostForm.addEventListener("submit", handleNewPostsubmit);
+editProfileForm.addEventListener("submit", handleEditProfileSubmit);
+newPostForm.addEventListener("submit", handleNewPostSubmit);
