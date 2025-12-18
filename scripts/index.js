@@ -43,7 +43,7 @@ function handleEditProfileSubmit(evt) {
   evt.preventDefault();
   profileNameEl.textContent = editPofileNameInput.value;
   profileDescriptionEl.textContent = editPofileDescriptionInput.value;
-  closeModal(editProfileModal);
+  editProfileModal.classList.remove("modal_is-opened");
 }
 
 function handleNewPostSubmit(evt) {
