@@ -2,10 +2,10 @@ const editProfileButton = document.querySelector(".profile__edit-button");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileExitBtn = editProfileModal.querySelector(".modal__exit-btn");
 const editProfileForm = editProfileModal.querySelector(".modal__form");
-const editPofileNameInput = editProfileModal.querySelector(
+const editProfileNameInput = editProfileModal.querySelector(
   "#profile-name-input"
 );
-const editPofileDescriptionInput = editProfileModal.querySelector(
+const editProfileDescriptionInput = editProfileModal.querySelector(
   "#profile-description-input"
 );
 
