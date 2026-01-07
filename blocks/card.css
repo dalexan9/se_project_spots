@@ -28,6 +28,16 @@
   display: block;
   border-radius: 8px;
   margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.card__image:hover {
+  transform: scale(1.02);
+}
+
+.card__image:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
 }
 
 .card__delete-btn {

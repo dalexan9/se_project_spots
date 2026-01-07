@@ -13,7 +13,7 @@
   font-weight: 500;
   padding: 10px;
   opacity: 0;
-  transition: visibility 0s linear 0s, opacity 0.5s linear;
+  transition: visibility 0s ease linear 0s, opacity 0.3s linear 0.3s;
 }
 
 .modal_preview {
@@ -23,7 +23,7 @@
 .modal_is-opened {
   visibility: visible;
   opacity: 1;
-  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+  transition: 0s, 0s;
 }
 
 .modal__content {

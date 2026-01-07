@@ -52,7 +52,7 @@ const newPostCardCaptionInput = newPostModal.querySelector(
 const previewModal = document.querySelector("#preview-modal");
 const previewModalExitBtn = previewModal.querySelector(".modal__exit-btn");
 const previewModalImageEl = previewModal.querySelector(".modal__image");
-const previewModalCaptionInput = previewModal.querySelector(".modal__caption");
+const previewModalCaptionEl = previewModal.querySelector(".modal__caption");
 
 const cardTemplate = document
   .querySelector("#card-template")
@@ -76,13 +76,12 @@ function getCardElement(data) {
   const cardDeleteBtnEl = cardElement.querySelector(".card__delete-btn");
   cardDeleteBtnEl.addEventListener("click", () => {
     cardElement.remove();
-    cardElement = null;
   });
 
   cardImageEl.addEventListener("click", () => {
     previewModalImageEl.src = data.link;
     previewModalImageEl.alt = data.name;
-    previewModalCaptionInput.textContent = data.name;
+    previewModalCaptionEl.textContent = data.name;
     openModal(previewModal);
   });
 
@@ -124,13 +123,22 @@ function handleEditProfileSubmit(evt) {
 function handleNewPostSubmit(evt) {
   evt.preventDefault();
 
-  const inputValues = {
-    name: newPostCardCaptionInput.value,
-    link: newPostCardImageInput.value,
+  const imageValue = newPostCardImageInput.value.trim();
+  const captionValue = newPostCardCaptionInput.value.trim();
+
+  if (!imageValue || !captionValue) {
+    return;
+  }
+
+  const inputValue = {
+    name: captionValue,
+    link: imageValue,
   };
 
-  const cards = getCardElement(inputValues);
+  const cards = getCardElement(inputValue);
   cardsList.prepend(cards);
+
+  evt.target.reset();
 
   closeModal(newPostModal);
 }
