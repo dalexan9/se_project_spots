@@ -27,11 +27,11 @@
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
             <button type="button" class="profile__edit-button">
-              <img src="./images/pencil.svg.svg" alt="pencil img" />Edit Profile
+              <img src="./images/pencil.svg.svg" alt="pencil-img" />Edit Profile
             </button>
           </div>
           <button type="button" class="profile__post-button">
-            <img src="./images/plus.svg" alt="plus img" /> New Post
+            <img src="./images/plus.svg" alt="plus-img" /> New Post
           </button>
         </section>
         <section class="cards page__section">
@@ -57,7 +57,7 @@
       <div class="modal" id="edit-profile-modal">
         <div class="modal__content">
           <button type="button" class="modal__exit-btn">
-            <img src="./images/Close-Icon.png" alt="exit-icon" />
+            <img src="./images/close.svg" alt="exit-icon" />
           </button>
           <h2 class="modal__title">Edit Profile</h2>
           <form class="modal__form">
@@ -68,6 +68,7 @@
                 type="text"
                 class="modal__input"
                 placeholder="Type your name"
+                required
               />
             </label>
             <label for="profile-description-input" class="modal__label">
@@ -86,7 +87,7 @@
       <div class="modal" id="new-post-modal">
         <div class="modal__content">
           <button type="button" class="modal__exit-btn">
-            <img src="./images/Close-Icon.png" alt="exit-icon" />
+            <img src="./images/close.svg" alt="exit-icon" />
           </button>
           <h2 class="modal__title">New Post</h2>
           <form class="modal__form">
@@ -117,7 +118,7 @@
       <div class="modal modal_preview" id="preview-modal">
         <div class="modal__image-container">
           <button type="button" class="modal__exit-btn modal__exit-btn_preview">
-            <img src="./images/Close-Icon.png" alt="exit-icon" />
+            <img src="./images/close.svg" alt="exit-icon" />
           </button>
           <img src="#" alt="" class="modal__image" />
           <p class="modal__caption"></p>
