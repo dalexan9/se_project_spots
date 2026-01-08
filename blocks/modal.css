@@ -44,11 +44,12 @@
   height: 40px;
   border: none;
   background-color: transparent;
+  opacity: 0.4;
   cursor: pointer;
 }
 
 .modal__exit-btn:hover {
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .modal__exit-btn_preview {
@@ -91,6 +92,9 @@
   min-width: 135px;
   display: inline-block;
   margin: 0;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
 }
 
 .modal__title {
@@ -125,8 +129,7 @@
 }
 
 .modal__input:hover {
-  background-color: #3c69e6;
-  box-shadow: 0 4px 10px rgba (0, 0, 0, 0, 12);
+  border-color: #212121;
 }
 
 .modal__input::placeholder {
