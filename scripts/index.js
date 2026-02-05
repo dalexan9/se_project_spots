@@ -34,19 +34,20 @@ const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileExitBtn = editProfileModal.querySelector(".modal__exit-btn");
 const editProfileForm = editProfileModal.querySelector(".modal__form");
 const editProfileNameInput = editProfileModal.querySelector(
-  "#profile-name-input"
+  "#profile-name-input",
 );
 const editProfileDescriptionInput = editProfileModal.querySelector(
-  "#profile-description-input"
+  "#profile-description-input",
 );
 
 const newPostButton = document.querySelector(".profile__post-button");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostExitBtn = newPostModal.querySelector(".modal__exit-btn");
 const newPostForm = newPostModal.querySelector(".modal__form");
+const newPostSaveBtn = newPostModal.querySelector(".modal__save-btn");
 const newPostCardImageInput = newPostModal.querySelector("#card-image-input");
 const newPostCardCaptionInput = newPostModal.querySelector(
-  "#card-caption-input"
+  "#card-caption-input",
 );
 
 const previewModal = document.querySelector("#preview-modal");
@@ -109,9 +110,9 @@ newPostExitBtn.addEventListener("click", function () {
   closeModal(newPostModal);
 });
 
-previewModalExitBtn.addEventListener("click", function () {
-  closeModal(previewModal);
-});
+//previewModalExitBtn.addEventListener("click", function () {
+// closeModal(previewModal);
+//});
 
 function handleEditProfileSubmit(evt) {
   evt.preventDefault();
@@ -139,16 +140,37 @@ function handleNewPostSubmit(evt) {
   cardsList.prepend(cards);
 
   evt.target.reset();
+  disableButton(newPostSaveBtn, settings);
 
   closeModal(newPostModal);
 }
 
+function handleEscapeKey(event) {
+  if (event.key === "Escape") {
+    const openModal = document.querySelector(".modal_is-opened");
+    if (openModal) closeModal(openModal);
+  }
+}
+
+const allModals = document.querySelectorAll(".modal");
+
+allModals.forEach((formElement) => {
+  formElement.addEventListener("click", function (event) {
+    if (event.target === formElement) {
+      closeModal(formElement);
+      //console.log(event.target);
+    }
+  });
+});
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscapeKey);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscapeKey);
 }
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);

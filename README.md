@@ -28,3 +28,6 @@ This project is a website created to upload and share your photos. I used Flexbo
 
 Check out [this video](https://drive.google.com/file/d/1WtkA1mDehE7KRET9S-yOx9o8GOSqKU6z/view?usp=drive_link), where I describe my
 project and some challenges I faced while building it.
+
+Check out [this video](https://www.loom.com/share/3370b73719b64063a959d4e3e754d392), where I describe my
+project and some challenges I faced while building it.
