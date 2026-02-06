@@ -110,9 +110,9 @@ newPostExitBtn.addEventListener("click", function () {
   closeModal(newPostModal);
 });
 
-//previewModalExitBtn.addEventListener("click", function () {
-// closeModal(previewModal);
-//});
+previewModalExitBtn.addEventListener("click", function () {
+  closeModal(previewModal);
+});
 
 function handleEditProfileSubmit(evt) {
   evt.preventDefault();

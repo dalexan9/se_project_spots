@@ -14,10 +14,11 @@ const showInputError = (formEl, inputEl, errorMsg, config) => {
   inputEl.classList.add(config.inputErrorClass);
 };
 
-const hideInputError = (formEl, inputEl, errorMsg, config) => {
+const hideInputError = (formEl, inputEl, config) => {
   const errorMsgId = inputEl.id + "-error";
   const errorMsgEl = formEl.querySelector("#" + errorMsgId);
   errorMsgEl.textContent = "";
+  inputEl.classList.remove(config.inputErrorClass);
 };
 
 const checkInputValidity = (formEl, inputEl, config) => {
@@ -45,7 +46,7 @@ const toggleButtonState = (inputList, buttonEl, config) => {
 
 const disableButton = (buttonEl, config) => {
   buttonEl.disabled = true;
-  buttonEl.classList.add(config.submitButtonSelector);
+  buttonEl.classList.add(config.inactiveButtonClass);
 };
 
 const setEventListeners = (formEl, config) => {
