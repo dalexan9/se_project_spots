@@ -129,7 +129,7 @@
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 20px;
-  color: #2121214d;
+  color: #212121;
 }
 
 .modal__input_error {
@@ -176,6 +176,10 @@
 }
 
 @media screen and (max-width: 627px) {
+  .modal__caption {
+    font-size: 16px;
+  }
+
   .modal__title {
     font-size: 20px;
   }
